@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="562.0" prefWidth="840.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <JFXTextField layoutX="472.0" layoutY="220.0" prefHeight="31.0" prefWidth="271.0" />
+      <JFXPasswordField layoutX="472.0" layoutY="360.0" prefHeight="31.0" prefWidth="271.0" />
+      <Label layoutX="396.0" layoutY="225.0" text="Account :" />
+      <Label layoutX="392.0" layoutY="365.0" text="Password :" />
+      <Label alignment="CENTER" layoutX="472.0" layoutY="88.0" prefHeight="68.0" prefWidth="271.0" text="APPLICATION DICTIONARY" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="733.0" layoutY="458.0" />
+      <JFXButton layoutX="673.0" layoutY="469.0" prefHeight="31.0" prefWidth="70.0" text="Login" />
+      <JFXButton layoutX="458.0" layoutY="469.0" text="Register" />
+      <ImageView fitHeight="562.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
