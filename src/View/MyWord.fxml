@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="976.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerMyWord">
+	<children>
+             <JFXListView fx:id="listview" layoutY="293.0" onMouseClicked="#getSelected" prefHeight="682.0" prefWidth="317.0" />
+            <WebView fx:id="webview" layoutX="317.0" layoutY="293.0" prefHeight="682.0" prefWidth="617.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </WebView>
+            <JFXTextField fx:id="txtfind" layoutY="254.0" prefHeight="31.0" prefWidth="317.0" />
+            <JFXButton layoutX="317.0" layoutY="254.0" onAction="#Speak2" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: pink;" text=" " textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="VOLUME_UP" size="24" text="" />
+               </graphic>
+            </JFXButton>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="20.0" prefHeight="87.0" prefWidth="305.0" text="Từ Yêu Thích Của Bạn" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="RED" glyphName="HEART" layoutX="557.0" layoutY="75.0" size="30" text="" />
+      <JFXButton layoutX="482.0" layoutY="253.0" onAction="#load" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: skyblue;" text=" " textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="REPEAT" size="24" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="401.0" layoutY="253.0" onAction="#Speak" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: skyblue;" text=" " textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="VOLUME_UP" size="24" text="" />
+         </graphic>
+      </JFXButton>
+         </children>
+</AnchorPane>

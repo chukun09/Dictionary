@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="976.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerEngViet">
+	<children>
+            <JFXButton contentDisplay="CENTER" layoutX="297.0" layoutY="259.0" onAction="#Speak" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: pink;" text=" " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+                  <FontAwesomeIconView fill="#ff00e5" glyphName="VOLUME_UP" size="22" />
+         </graphic></JFXButton>
+            <BorderPane layoutX="296.0" layoutY="299.0" prefHeight="677.0" prefWidth="639.0" style="-fx-border-color: gray; -fx-border-width: 2;">
+               <top>
+                  <WebView fx:id="webview" prefHeight="676.0" prefWidth="639.0" BorderPane.alignment="CENTER" />
+               </top>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </BorderPane>
+      <JFXListView fx:id="listword" layoutY="301.0" onMouseClicked="#getSelected" prefHeight="680.0" prefWidth="297.0">
+         <effect>
+            <DropShadow />
+         </effect></JFXListView>
+      <JFXTextField fx:id="combofind" layoutX="5.0" layoutY="260.0" onMouseClicked="#Reset" prefHeight="31.0" prefWidth="288.0" />
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="387.0" layoutY="259.0" onAction="#Speak2" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: pink;" text=" " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="BLUE" glyphName="VOLUME_UP" size="22" />
+         </graphic>
+      </JFXButton>
+      <TitledPane animated="false" layoutX="535.0" prefHeight="246.0" prefWidth="400.0" text="Từ tra gần đây ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <JFXListView fx:id="listviewundo" layoutX="-1.0" layoutY="-1.0" prefHeight="216.0" prefWidth="400.0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <graphic>
+            <FontAwesomeIconView glyphName="UNDO" size="20" wrappingWidth="14.0" />
+         </graphic>
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </TitledPane>
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="468.0" layoutY="259.0" onAction="#Click" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: pink;" text=" " textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fx:id="heart" fill="WHITE" glyphName="HEART" size="22" />
+         </graphic>
+      </JFXButton>
+         </children>
+</AnchorPane>

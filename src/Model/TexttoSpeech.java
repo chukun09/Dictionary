@@ -1,14 +1,19 @@
-package TTS;
+package Model;
 
 import javax.speech.Central;
 import javax.speech.synthesis.SynthesizerModeDesc;
+
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.advanced.AdvancedPlayer;
+
 import javax.speech.synthesis.Synthesizer;
+
+import java.io.IOException;
 import java.util.Locale;
 
-class TexttoSpeech {
-	public void Texttospeech(String s) {
+public class TexttoSpeech {
+	public void ManVoice(String s) {
 		try {
-			// Set property as Kevin Dictionary
 			System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us" + ".cmu_us_kal.KevinVoiceDirectory");
 			Central.registerEngineCentral("com.sun.speech.freetts" + ".jsapi.FreeTTSEngineCentral");
 			Synthesizer synthesizer = Central.createSynthesizer(new SynthesizerModeDesc(Locale.ENGLISH));
@@ -16,14 +21,24 @@ class TexttoSpeech {
 			synthesizer.resume();
 			synthesizer.speakPlainText(s, null);
 			synthesizer.waitEngineState(Synthesizer.QUEUE_EMPTY);
-			synthesizer.deallocate();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static void main(String[] args) {
-		TexttoSpeech a = new TexttoSpeech();
-		a.Texttospeech("Hello");
+	SynthesiserV2 synthesizer = new SynthesiserV2("AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw");
+
+	public void WomenVoice(String text) {
+		Thread thread = new Thread(() -> {
+			try {
+				AdvancedPlayer player = new AdvancedPlayer(synthesizer.getMP3Data(text));
+				player.play();
+			} catch (IOException | JavaLayerException e) {
+
+				e.printStackTrace();
+			}
+		});
+		thread.setDaemon(false);
+		thread.start();
 	}
 }

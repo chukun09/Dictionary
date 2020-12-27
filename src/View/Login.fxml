@@ -8,21 +8,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="562.0" prefWidth="840.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="766.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Main">
    <children>
-      <JFXTextField layoutX="472.0" layoutY="220.0" prefHeight="31.0" prefWidth="271.0" />
-      <JFXPasswordField layoutX="472.0" layoutY="360.0" prefHeight="31.0" prefWidth="271.0" />
-      <Label layoutX="396.0" layoutY="225.0" text="Account :" />
-      <Label layoutX="392.0" layoutY="365.0" text="Password :" />
-      <Label alignment="CENTER" layoutX="472.0" layoutY="88.0" prefHeight="68.0" prefWidth="271.0" text="APPLICATION DICTIONARY" textAlignment="CENTER">
+      <JFXTextField fx:id="txttdn" layoutX="398.0" layoutY="262.0" prefHeight="31.0" prefWidth="435.0" promptText="Username" />
+      <JFXPasswordField fx:id="txtpassword" layoutX="397.0" layoutY="362.0" prefHeight="31.0" prefWidth="435.0" promptText="Password" />
+      <Label layoutX="733.0" layoutY="458.0" />
+      <JFXButton defaultButton="true" layoutX="398.0" layoutY="458.0" onAction="#Login" prefHeight="64.0" prefWidth="435.0" style="-fx-background-color: orange;" text="Login">
          <font>
             <Font name="Times New Roman" size="20.0" />
+         </font></JFXButton>
+      <AnchorPane prefHeight="766.0" prefWidth="384.0" style="-fx-background-color: black; -fx-background-image: url(&quot;file:///C:/Users/DELL/eclipse-workspace/Dictionary/lib/Lan%20Anh.jpg&quot;);" />
+      <AnchorPane layoutX="384.0" prefHeight="182.0" prefWidth="460.0" style="-fx-background-color: gray;">
+         <children>
+            <Label alignment="CENTER" layoutX="-1.0" prefHeight="182.0" prefWidth="460.0" text="APPLICATION DICTIONARY" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton alignment="CENTER" layoutX="569.0" layoutY="569.0" onAction="#Register" text="Sign up">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font></JFXButton>
+      <Label alignment="CENTER" layoutX="537.0" layoutY="719.0" prefHeight="21.0" prefWidth="161.0" text="\@ Dictionary App 2020" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="733.0" layoutY="458.0" />
-      <JFXButton layoutX="673.0" layoutY="469.0" prefHeight="31.0" prefWidth="70.0" text="Login" />
-      <JFXButton layoutX="458.0" layoutY="469.0" text="Register" />
-      <ImageView fitHeight="562.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

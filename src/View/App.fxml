@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.textfield.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="976.0" prefHeight="976.0" prefWidth="1272.0" xmlns="http://javafx.com/javafx/8" stylesheets="@application.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <Pane fx:id="pane3" layoutX="338.0" prefHeight="985.0" prefWidth="934.0" visible="false">
+         <children>
+         	<fx:include source="MyWord.fxml" />
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="976.0" prefWidth="327.0" style="-fx-background-color: #FFCA4B;">
+         <children>
+            <FontAwesomeIconView glyphName="USER" layoutX="123.0" layoutY="158.0" size="100" />
+            <Label fx:id="welcome" alignment="CENTER" layoutX="-5.0" layoutY="183.0" prefHeight="62.0" prefWidth="334.0" text="Hello">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font></Label>
+            <JFXButton layoutY="392.0" onAction="#Click1" prefHeight="70.0" prefWidth="334.0" style="-fx-background-color: orange;" text="Từ Điển Anh Việt">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton layoutY="530.0" onAction="#Click2" prefHeight="70.0" prefWidth="334.0" style="-fx-background-color: orange;" text="Dịch Văn Bản">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="2.0" layoutY="663.0" onAction="#Click3" prefHeight="70.0" prefWidth="334.0" style="-fx-background-color: orange;" text="Từ Của Bạn">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="1.0" layoutY="802.0" onAction="#Click4" prefHeight="70.0" prefWidth="336.0" style="-fx-background-color: orange;" text="Cài Đặt">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="BOOK" layoutX="50.0" layoutY="441.0" size="40" />
+            <FontAwesomeIconView glyphName="GOOGLE" layoutX="54.0" layoutY="579.0" size="40" />
+            <FontAwesomeIconView glyphName="HEART" layoutX="48.0" layoutY="712.0" size="40" />
+            <FontAwesomeIconView glyphName="COG" layoutX="51.0" layoutY="851.0" size="40" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="pane1" layoutX="337.0" prefHeight="976.0" prefWidth="934.0">
+					<children>
+						<fx:include source="EngVietDictionary.fxml" />
+					</children>
+      </Pane>
+      <Pane fx:id="pane2" layoutX="338.0" prefHeight="976.0" prefWidth="934.0" visible="false">
+         <children>
+            <fx:include source="TranslatePagraph.fxml" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane4" layoutX="338.0" prefHeight="976.0" prefWidth="934.0" visible="false">
+         <children>
+           <fx:include source="Setting.fxml" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

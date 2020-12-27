@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="976.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerSetting">
+	<children>
+	 <JFXButton layoutX="147.0" layoutY="211.0" prefHeight="116.0" prefWidth="641.0" style="-fx-background-color: orange;" text="Chia Sẻ Lên FaceBook">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#Logout" layoutX="147.0" layoutY="633.0" prefHeight="116.0" prefWidth="641.0" style="-fx-background-color: orange;" text="Đăng Xuất">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="147.0" layoutY="438.0" prefHeight="100.0" prefWidth="256.0" text="Xem Source Code :">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="link" layoutX="369.0" layoutY="468.0" prefHeight="40.0" prefWidth="419.0" text="https://github.com/chukun09/Dictionary">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Hyperlink>
+    </children>
+</AnchorPane>
+
