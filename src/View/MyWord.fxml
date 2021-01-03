@@ -19,7 +19,7 @@
                   <DropShadow />
                </effect>
             </WebView>
-            <JFXTextField fx:id="txtfind" layoutY="254.0" prefHeight="31.0" prefWidth="317.0" />
+            <JFXTextField fx:id="txtfind" layoutY="254.0" onMouseClicked="#Reset" prefHeight="31.0" prefWidth="317.0" />
             <JFXButton layoutX="317.0" layoutY="254.0" onAction="#Speak2" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: pink;" text=" " textAlignment="CENTER">
                <graphic>
                   <FontAwesomeIconView glyphName="VOLUME_UP" size="24" text="" />
@@ -39,6 +39,11 @@
       <JFXButton layoutX="401.0" layoutY="253.0" onAction="#Speak" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: skyblue;" text=" " textAlignment="CENTER">
          <graphic>
             <FontAwesomeIconView glyphName="VOLUME_UP" size="24" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="560.0" layoutY="254.0" onAction="#Delete" prefHeight="31.0" prefWidth="66.0" style="-fx-background-color: skyblue;" text=" " textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="TIMES" size="24" />
          </graphic>
       </JFXButton>
          </children>

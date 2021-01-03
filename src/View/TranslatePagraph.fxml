@@ -36,5 +36,15 @@
       </JFXButton>
       <TextArea fx:id="txteng" layoutX="14.0" layoutY="195.0" prefHeight="288.0" prefWidth="915.0" wrapText="true" />
       <TextArea fx:id="txtvie" layoutX="14.0" layoutY="611.0" prefHeight="288.0" prefWidth="915.0" wrapText="true" />
+      <JFXButton layoutX="753.0" layoutY="159.0" onAction="#Micro" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: skyblue;" text=" ">
+         <graphic>
+            <FontAwesomeIconView fx:id="micro" fill="WHITE" glyphName="MICROPHONE" size="25" text="" wrappingWidth="5.071428298950195" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="753.0" layoutY="576.0" onAction="#Micro2" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: skyblue;" text=" ">
+         <graphic>
+            <FontAwesomeIconView fx:id="micro1" fill="WHITE" glyphName="MICROPHONE" size="25" text="" wrappingWidth="5.071428298950195" />
+         </graphic>
+      </JFXButton>
          </children>
 </AnchorPane>

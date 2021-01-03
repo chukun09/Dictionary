@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXButton;
+
 import View.Main;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -19,6 +21,8 @@ import javafx.stage.Stage;
 public class ControllerSetting extends Application implements Initializable {
 	@FXML
 	Hyperlink link;
+	@FXML
+	JFXButton btnfb;
 
 	public void loaddata() {
 		link.setOnAction(new EventHandler<ActionEvent>() {
@@ -26,6 +30,14 @@ public class ControllerSetting extends Application implements Initializable {
 			public void handle(ActionEvent event) {
 				getHostServices().showDocument("https://github.com/chukun09/Dictionary");
 			}
+		});
+		btnfb.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				getHostServices().showDocument("https://www.facebook.com/");
+			}
+
 		});
 	}
 

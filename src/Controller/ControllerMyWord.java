@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import View.Main;
 import com.jfoenix.controls.JFXListView;
@@ -23,6 +24,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -39,6 +41,7 @@ public class ControllerMyWord extends Application implements Initializable {
 	ControllerEngViet b = new ControllerEngViet();
 
 	public void loaddata() throws SQLException {
+		list = b.Upload();
 		listview.getItems().addAll(FXCollections.observableArrayList(b.Update2()));
 	}
 
@@ -62,6 +65,18 @@ public class ControllerMyWord extends Application implements Initializable {
 				web.loadContent(i.getDetail());
 			}
 		}
+	}
+
+	Connection connection;
+
+	public void Delete() throws SQLException {
+		Statement stat = connection.createStatement();
+		String sql1 = "delete from [tbl-favourite] where account = N'" + Main.nowuser + "' and word ='"
+				+ txtfind.getText() + "'";
+		stat.executeUpdate(sql1);
+		list = b.Upload();
+		Reset();
+		load();
 	}
 
 	public void search() throws SQLException {
@@ -109,8 +124,18 @@ public class ControllerMyWord extends Application implements Initializable {
 		a.WomenVoice(txtfind.getText());
 	}
 
+	public void Reset() {
+		txtfind.setText("");
+		web.loadContent("");
+	}
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		try {
+			connection = DatabaseConnection.ConnectionData("Dictionary");
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
 		web = webview.getEngine();
 		try {
 			loaddata();

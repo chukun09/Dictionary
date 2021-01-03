@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="976.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerSetting">
 	<children>
-	 <JFXButton layoutX="147.0" layoutY="211.0" prefHeight="116.0" prefWidth="641.0" style="-fx-background-color: orange;" text="Chia Sẻ Lên FaceBook">
+	 <JFXButton fx:id="btnfb" layoutX="147.0" layoutY="211.0" prefHeight="116.0" prefWidth="641.0" style="-fx-background-color: orange;" text="Chia Sẻ Lên FaceBook">
                <font>
                   <Font name="Times New Roman Bold" size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton onAction="#Logout" layoutX="147.0" layoutY="633.0" prefHeight="116.0" prefWidth="641.0" style="-fx-background-color: orange;" text="Đăng Xuất">
+            <JFXButton layoutX="147.0" layoutY="633.0" onAction="#Logout" prefHeight="116.0" prefWidth="641.0" style="-fx-background-color: orange;" text="Đăng Xuất">
                <font>
                   <Font name="Times New Roman Bold" size="25.0" />
                </font>
@@ -32,4 +32,3 @@
             </Hyperlink>
     </children>
 </AnchorPane>
-

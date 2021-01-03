@@ -54,7 +54,6 @@ public class ControllerEngViet extends Application implements Initializable {
 		web = webview.getEngine();
 	}
 
-
 	public void Click() throws SQLException {
 		Statement stat = connection.createStatement();
 		if (heart.getFill() == Color.RED) {
@@ -73,7 +72,8 @@ public class ControllerEngViet extends Application implements Initializable {
 			for (Word i : list) {
 				if (i.getWord().equals(combofind.getText())) {
 					String sql = "Insert into [tbl-favourite] (account, word, detail) values ( N'" + Main.nowuser
-							+ "', N'" + i.getWord().replace("'", "\\'") + "', N'" + i.getDetail().replace("'", "\\'") + "')";
+							+ "', N'" + i.getWord().replace("'", "\\'") + "', N'" + i.getDetail().replace("'", "`")
+							+ "')";
 					stat.executeUpdate(sql);
 					heart.setFill(Color.RED);
 					favouriteWord = Upload();
@@ -140,10 +140,11 @@ public class ControllerEngViet extends Application implements Initializable {
 		connection = DatabaseConnection.ConnectionData("Dictionary");
 		ObservableList<String> list = FXCollections.observableArrayList();
 		try {
-			PreparedStatement ps1 = connection.prepareStatement("Select * from [tbl-favourite] where account = '" + Main.nowuser + "'");
+			PreparedStatement ps1 = connection
+					.prepareStatement("Select * from [tbl-favourite] where account = '" + Main.nowuser + "'");
 			rs = ps1.executeQuery();
 			while (rs.next()) {
-					list.add(rs.getString(2));
+				list.add(rs.getString(2));
 			}
 		} catch (Exception e) {
 			System.out.println(e.toString());
@@ -153,7 +154,8 @@ public class ControllerEngViet extends Application implements Initializable {
 
 	public void Reset() {
 		combofind.setText("");
-		web.loadContent(null);
+		web.loadContent("");
+		heart.setFill(Color.WHITE);
 	}
 
 	@Override
